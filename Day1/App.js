@@ -26,22 +26,37 @@ const parentElem = (
     Namaste from JSX
   </h1>
 );
-const MiniTitleComp = () => <h3>Namasthe</h3>;
+export const MiniTitleComp = () => <h3>Namasthe</h3>;
 const Title = () => (
   <div id="title">
     <MiniTitleComp />
     <h2>Namasthe Title</h2>
   </div>
 );
-const HeadingComponent = () => {
+export const HeadingComponent = () => {
   return (
     <div className="hedding">
       <Title />
       <h1>Namasthe from HeadingComponent</h1>
+      <button>Submit</button>
     </div>
   );
 };
 console.log({ parentElem });
-const root = ReactDOM.createRoot(document.getElementById("root"));
+// const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<HeadingComponent />);
+// root.render(<HeadingComponent />);
+
+// ReactDOM.createRoot(document.getElementById("root")).render(
+//   <React.StrictMode>
+//     <HeadingComponent />
+//   </React.StrictMode>
+// );
+
+document.addEventListener("DOMContentLoaded", function () {
+  ReactDOM.createRoot(document.getElementById("root")).render(
+    <React.StrictMode>
+      <HeadingComponent />
+    </React.StrictMode>
+  );
+});
